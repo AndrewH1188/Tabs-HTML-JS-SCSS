@@ -1,0 +1,106 @@
+:root {
+    --clr-primary: hsl(153, 82%, 50%);
+    --clr-text-dark: hsl(250, 15%, 8%);
+    --clr-text-light: hsl(240, 4%, 57%);
+    --clr-bg: hsl(150, 48%, 75%);
+    --clr-neutral: hsl(222, 23%, 91%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    height: 100vh;
+    color: var(--clr-text-light);
+    background-color: var(--clr-bg);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+button {
+    ul, li { all: unset; }
+}
+
+.tab-container { 
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+    margin-top: 320px;
+}
+
+.tab-menu {
+    display: flex;
+    width: 100%;
+    & > .tab {
+        flex: 1;
+        background-color: var(--clr-neutral);
+        font-size: 1em;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-right: 2px solid var(--clr-white);
+        }
+        
+        &.active {
+            background-color: var(--clr-white);
+
+            a {
+                color: var(--clr-primary);
+            }
+        }
+
+        & > a { 
+            width: 100%;
+            height: 100%;
+            padding: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--clr-text-dark);
+            font-weight: 700;
+            letter-spacing: 0.5;
+            text-decoration: none;
+        }
+    }
+}
+
+.tab-panels {
+    padding: 48px;
+
+    h3 {
+        font-size: 20px;
+        color: var(--clr-text-dark);
+        margin-bottom: 20px;
+    }
+
+    p { 
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 28px;
+    }
+}
+
+.panel {
+    > button {
+        padding: 10px 28px;
+        color: var(--clr-white);
+        background-color: var(--clr-text-dark);
+        border-radius: 6px;
+        font-size: 1em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
