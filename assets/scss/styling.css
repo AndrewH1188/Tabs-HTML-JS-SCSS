@@ -33,7 +33,7 @@ button, ul, li {
   display: flex;
   flex-direction: column;
   background-color: var(--clr-white);
-  margin-top: 320px;
+  margin: 150px 0;
 }
 
 .tab-menu {
